@@ -1,0 +1,31 @@
+|*** Date Of The Event :12/4/2022 7:31:50 PM ***|
+
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at NotesSys.SettingsManager.Set (System.Object setting, System.Object value) [0x00008] in <b1269ea96b904f7e81d8cf9c58dae81c>:0 
+  at NotesSys.SettingsManager.DefaultSettings () [0x0000a] in <b1269ea96b904f7e81d8cf9c58dae81c>:0 |*** Date Of The Event :12/4/2022 7:31:18 PM ***|
+
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at NotesSys.SettingsManager.Set (System.Object setting, System.Object value) [0x00008] in <b1269ea96b904f7e81d8cf9c58dae81c>:0 
+  at NotesSys.SettingsManager.DefaultSettings () [0x0000a] in <b1269ea96b904f7e81d8cf9c58dae81c>:0 |*** Date Of The Event :12/4/2022 7:30:06 PM ***|
+
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at NotesSys.SettingsManager.Set (System.Object setting, System.Object value) [0x00008] in <a3367f16448e4653b648d12b471fe1c4>:0 
+  at NotesSys.SettingsManager.DefaultSettings () [0x0000a] in <a3367f16448e4653b648d12b471fe1c4>:0 |*** Date Of The Event :12/4/2022 7:30:01 PM ***|
+
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at NotesSys.SettingsManager.Set (System.Object setting, System.Object value) [0x00008] in <a3367f16448e4653b648d12b471fe1c4>:0 
+  at NotesSys.SettingsManager.DefaultSettings () [0x0000a] in <a3367f16448e4653b648d12b471fe1c4>:0 |*** Date Of The Event :12/4/2022 7:29:41 PM ***|
+
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at NotesSys.SettingsManager.Set (System.Object setting, System.Object value) [0x00001] in /home/mel/Documents/csharp/NotesSys/SettingsManager.cs:76 
+  at NotesSys.SettingsManager.DefaultSettings () [0x0000a] in /home/mel/Documents/csharp/NotesSys/SettingsManager.cs:175 |*** Date Of The Event :12/4/2022 7:29:26 PM ***|
+
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at NotesSys.SettingsManager.Set (System.Object setting, System.Object value) [0x00001] in /home/mel/Documents/csharp/NotesSys/SettingsManager.cs:76 
+  at NotesSys.SettingsManager.DefaultSettings () [0x0000a] in /home/mel/Documents/csharp/NotesSys/SettingsManager.cs:175 

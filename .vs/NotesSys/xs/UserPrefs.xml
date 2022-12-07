@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{789E96B9-D63D-40C1-B208-8647247F7CEC}|Default">
+  <MonoDevelop.Ide.ItemProperties.NotesSys PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SettingsManager.cs">
+    <Files>
+      <File FileName="MainMenu.cs" Line="58" Column="37" />
+      <File FileName="NotesManager.cs" Line="36" Column="34" />
+      <File FileName="SettingsManager.cs" Line="121" Column="30" />
+      <File FileName="Program.cs" Line="44" Column="22" />
+      <File FileName="SettingsList.cs" Line="58" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
