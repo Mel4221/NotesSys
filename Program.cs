@@ -24,6 +24,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 using System;
+using System.Collections.Generic;
 using QuickTools; 
 
 namespace NotesSys
@@ -33,17 +34,17 @@ namespace NotesSys
             public static void Main(string[] args)
             {
 
+                  NotesManager notesManager = new NotesManager(); 
 
-                /*
-                   while(true)
-                   {    
-                         var app = new SettingsManager();
 
-                        // Get.Wait(app.Load());
-                   }
-                   */
 
-                  // just in case if i want to handle the args diferently later
+
+
+
+
+
+                  Get.Wait("Waiting for input");
+                /**********************************************************/
                   if (args.Length > 0 )
                   {
                         Get.Yellow("This is still not implemented"); 

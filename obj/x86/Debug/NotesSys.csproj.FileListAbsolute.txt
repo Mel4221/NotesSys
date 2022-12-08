@@ -6,4 +6,3 @@
 /home/mel/Documents/csharp/NotesSys/obj/x86/Debug/NotesSys.csproj.CopyComplete
 /home/mel/Documents/csharp/NotesSys/obj/x86/Debug/NotesSys.exe
 /home/mel/Documents/csharp/NotesSys/obj/x86/Debug/NotesSys.pdb
-/home/mel/Documents/csharp/NotesSys/obj/x86/Debug/NotesSys.csproj.AssemblyReference.cache

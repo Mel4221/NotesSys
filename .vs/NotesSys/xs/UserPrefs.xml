@@ -1,16 +1,26 @@
 ﻿<Properties StartupConfiguration="{789E96B9-D63D-40C1-B208-8647247F7CEC}|Default">
   <MonoDevelop.Ide.ItemProperties.NotesSys PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SettingsManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="MainMenu.cs" Line="58" Column="37" />
-      <File FileName="NotesManager.cs" Line="36" Column="34" />
-      <File FileName="SettingsManager.cs" Line="121" Column="30" />
-      <File FileName="Program.cs" Line="44" Column="22" />
-      <File FileName="SettingsList.cs" Line="58" Column="14" />
+      <File FileName="Program.cs" Line="38" Column="19" />
+      <File FileName="NotesManager.cs" Line="39" Column="44" />
+      <File FileName="notes (copy).txt" Line="58" Column="41" />
+      <File FileName="NoteBase.cs" Line="8" Column="50" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NotesSys" expanded="True">
+            <Node name="NotesSys" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

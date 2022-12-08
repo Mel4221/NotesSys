@@ -1,4 +1,4 @@
-﻿//
+//
 // ${Melquiceded Balbi Villanueva}
 //
 // Author:
@@ -23,20 +23,71 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-using System.Collections.Generic;
+
+using System;
+using QuickTools; 
+using System.Collections.Generic; 
 
 namespace NotesSys
 {
-      internal class NotesManager
+        public class NotesManager
       {
-            public string Path = "";
-            public List<string> NotesPath = new List<string>(); 
+      
+
+
+            /// <summary>
+            /// Contains the List of Notes 
+            /// </summary>
+            public List<Note> Notes = new List<Note>();
+
+
+
+
+
+
+            /// <summary>
+            /// Returns the Notes Count
+            /// </summary>
+            /// <returns>The count.</returns>
+            public int Count() => Notes.Count;
+            /// <summary>
+            /// Get the specified Note by the Index provided.
+            /// </summary>
+            /// <returns>The get.</returns>
+            /// <param name="index">Index.</param>
+            public Note Get(int index) => Notes[index];
+            /// <summary>
+            /// Add the spesifyed note to the list 
+            /// </summary>
+            /// <param name="note">Note.</param>
+            public void Add(Note note) => Notes.Add(note);
+            /// <summary>
+            /// Remove the note from the list 
+            /// </summary>
+            /// <param name="name">Note.</param>
+            public void Remove(string name ) => Notes.Remove(this.Find(name));
+
+
+            public Note Find(string name)
+            {
+                  foreach(var note in Notes)
+                  {
+                        if(note.Name == name)
+                        {
+                              return note; 
+                        }
+                  }
+                  return default(Note); 
+            }
+
+       
+
 
 
             public NotesManager()
             {
                   SettingsManager settingsManager = new SettingsManager();
-                  settingsManager.LoadSettings(); 
+                  settingsManager.LoadSettings();
             }
       }
 }
