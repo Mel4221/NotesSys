@@ -33,16 +33,40 @@ namespace NotesSys
       {
             public static void Main(string[] args)
             {
+                  /*
+                        NotesManager notesManager = new NotesManager();
+                        var setup = new SettingsManager();
+                  */
 
-                  NotesManager notesManager = new NotesManager(); 
+                  NotesManager notes = new NotesManager();
+
+                  notes.Add(new Note() {
+                        Name = "TodoList",
+                        Text = "go to the school",
+                        Number = notes.Number(),
+
+                        
+                  });
+
+                  notes.Add(new Note()
+                  {
+                        Name = "TodoList",
+                        Text = "go to the store",
+                        Number = notes.Number()
+                        
+                  });
 
 
+                  foreach(var note in notes.Notes)
+                  {
+                        Get.Blue(note.ToString());
+                        //Get.Wait(note.ToString());
+                        //string file = $"{note.Number}{note.Name}.txt";
+                        Writer.Write(note.Number+"note.txt", note.ToString()); 
+                  }
 
 
-
-
-
-
+                  Get.Blue(notes.Get(0).ToString());
                   Get.Wait("Waiting for input");
                 /**********************************************************/
                   if (args.Length > 0 )
@@ -58,3 +82,23 @@ namespace NotesSys
             }
       }
 }
+
+
+/*
+
+                  int x = 0; 
+                  while(x < 500)
+                  {
+
+                        x++;
+                       // Get.Green(setup.Get(x.ToString()));
+                        //setup.Remove(x.ToString()); 
+                        //string data = $"Date: {DateTime.Now } Random Data: {IRandom.RandomText(10000)}";
+                       // Get.Green($" {Math.Round(Convert.ToDouble((x/500)*1000),2)}%"); 
+                       // setup.Add(x,data);
+                        //Get.WaitTime(1000); 
+
+                  }
+               
+
+*/

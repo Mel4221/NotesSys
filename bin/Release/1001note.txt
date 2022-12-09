@@ -1,0 +1,7 @@
+ Name: TodoList 
+ Text: go to the store 
+ Path: /home/mel/Documents/csharp/NotesSys/bin/Release 
+ URI: file:///home/mel/Documents/csharp/NotesSys/bin/Release 
+ ID: 1000 
+ Number: 1001 
+ Created_Date: 12/8/2022 11:50:59 PM 

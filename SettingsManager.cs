@@ -34,6 +34,9 @@ namespace NotesSys
 {
       internal class SettingsManager
       {
+
+
+        
             public SettingsManager()
             {
 
@@ -73,7 +76,23 @@ namespace NotesSys
                   config.Save(ConfigurationSaveMode.Minimal);
             }
 
+            public string Get(string key) => ConfigurationManager.AppSettings[key];
 
+            public void Remove(string key)
+            {
+
+
+                  config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                  config.AppSettings.Settings.Remove(key);
+                  config.Save(ConfigurationSaveMode.Modified);
+                  ConfigurationManager.RefreshSection("appSettings");
+
+                  if (Get(key) != null)
+                  {
+                        Remove(Get(key));
+                  }
+
+            }
 
             public void Add(object setting , object value)
             {
@@ -123,7 +142,7 @@ namespace NotesSys
                         int answer = options.Pick(true);
                         if (Options.Triguered) Go.Back(); 
 
-                        Get.Wait(Load(SettingRef[answer-1])); 
+                     //  Get.Wait(Load(SettingRef[answer-1])); 
                   }
 
                   /*

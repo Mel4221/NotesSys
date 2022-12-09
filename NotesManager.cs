@@ -32,40 +32,43 @@ namespace NotesSys
 {
         public class NotesManager
       {
-      
 
+            /// <summary>
+            /// Noteses the indexer.
+            /// </summary>
+            /// <returns>The indexer.</returns>
+            public int Number() => Count() + 1000; 
 
             /// <summary>
             /// Contains the List of Notes 
             /// </summary>
             public List<Note> Notes = new List<Note>();
 
-
-
-
-
-
             /// <summary>
             /// Returns the Notes Count
             /// </summary>
             /// <returns>The count.</returns>
             public int Count() => Notes.Count;
+
             /// <summary>
             /// Get the specified Note by the Index provided.
             /// </summary>
             /// <returns>The get.</returns>
             /// <param name="index">Index.</param>
             public Note Get(int index) => Notes[index];
+
             /// <summary>
             /// Add the spesifyed note to the list 
             /// </summary>
             /// <param name="note">Note.</param>
             public void Add(Note note) => Notes.Add(note);
+
             /// <summary>
             /// Remove the note from the list 
             /// </summary>
             /// <param name="name">Note.</param>
             public void Remove(string name ) => Notes.Remove(this.Find(name));
+
 
 
             public Note Find(string name)
@@ -83,7 +86,9 @@ namespace NotesSys
        
 
 
-
+            /// <summary>
+            /// Initializes a new instance of the <see cref="T:NotesSys.NotesManager"/> class.
+            /// </summary>
             public NotesManager()
             {
                   SettingsManager settingsManager = new SettingsManager();
