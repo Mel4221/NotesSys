@@ -30,7 +30,7 @@ using System.Collections.Generic;
 
 namespace NotesSys
 {
-        public class NotesManager
+        public partial class NotesManager
       {
 
             /// <summary>

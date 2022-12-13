@@ -47,6 +47,7 @@
     <Compile Include="NoteBase.cs" />
     <Compile Include="NotesManager.cs" />
     <Compile Include="notes %28copy%29.txt" />
+    <Compile Include="NotesManagerExt.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

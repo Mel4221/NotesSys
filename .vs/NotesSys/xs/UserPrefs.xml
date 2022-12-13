@@ -1,18 +1,16 @@
 ﻿<Properties StartupConfiguration="{789E96B9-D63D-40C1-B208-8647247F7CEC}|Default">
   <MonoDevelop.Ide.ItemProperties.NotesSys PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="notes (copy).txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NotesManager.Data.cs">
     <Files>
-      <File FileName="Program.cs" Line="57" Column="22" />
-      <File FileName="NotesManager.cs" Line="33" Column="34" />
-      <File FileName="NoteBase.cs" Line="15" Column="1" />
-      <File FileName="notes (copy).txt" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="57" Column="1" />
+      <File FileName="NotesManager.Data.cs" Line="29" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NotesSys" expanded="True">
             <Node name="NotesSys" expanded="True">
-              <Node name="notes (copy).txt" selected="True" />
+              <Node name="NotesManager.Data.cs" selected="True" />
             </Node>
           </Node>
         </State>

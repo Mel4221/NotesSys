@@ -25,7 +25,17 @@
 // THE SOFTWARE.
 using System;
 using System.Collections.Generic;
-using QuickTools; 
+using QuickTools;
+
+/*
+      quick note 
+      i have to set up the functionality that handles if either the note will be save with 
+      using NOTEPAD 
+      or vim in linux 
+      which could be modifyied later
+      also to get the path or directory i will be using enviroment variables such as 
+      "WHOAMI" and "%USERNAME%"
+*/
 
 namespace NotesSys
 {
