@@ -32,57 +32,64 @@ using System.Collections.Generic;
 namespace NotesSys
 {
         public partial class NotesManager
-      { 
-            public class NotesInfo
+      {
+            /// <summary>
+            /// Gets or sets the DBP ath.
+            /// </summary>
+            /// <value>The DBP ath.</value>
+            private string DBPath { get; set; }
+            /// <summary>
+            /// Gets or sets the path.
+            /// </summary>
+            /// <value>The path.</value>
+            private string Path { get; set; }
+            /// <summary>
+            /// The maindb.
+            /// </summary>
+            private string masterdb { get; set; }
+            /// <summary>
+            /// The notesdb.
+            /// </summary>
+            private string notesdb { get; set; }
+
+            /// <summary>
+            /// News the note.
+            /// </summary>
+            /// <param name="note">Note.</param>
+            public void NewNote(Note note)      
             {
-
-                  
-                  public void Get(string file)
-                  {
+                  if (IsDBSetup()) { }
 
 
-
-
-                        string fileName, atribute;
-                        fileName = file;
-                        atribute = "PATH";
-
-
-                        using (XmlReader reader = XmlReader.Create(fileName))
-                        {
-
-
-                              while (reader.Read())
-                              {
-
-                                    // Get.Green(reader.Name + " " + reader.GetAttribute(atribute));
-
-
-                                    if ((reader.NodeType == XmlNodeType.Element) && reader.Name != "")//(reader.Name.IndexOf("DATE") == 0))
-                                    {
-                                          if (reader.HasAttributes)
-                                          {
-                                                //  Get.Blue(reader.GetAttribute(atribute));
-
-                                          }
-
-                                    }
-
-
-                              }
-                        }
-                  }
-                        public void Write()
-                        {
-
-                        }
-                  }
-                  public void Set()
-                  {
-
-                  }
 
             }
+
+            /// <summary>
+            /// Opens the note.
+            /// </summary>
+            /// <param name="note">Note.</param>
+            public void OpenNote(string note)
+            {
+
+            }
+
+
+            bool IsDBSetup()
+            {
+                  MiniDB master = new MiniDB(masterdb, "note","M");
+                  MiniDB notes = new MiniDB(notesdb);
+
+                  bool a = notes.Create();
+                  bool b = master.Create(); 
+                  if(a && b == false)
+                  {
+                        return true; 
+                  }
+
+                  return false; 
+            }
+
+
       }
 
 }

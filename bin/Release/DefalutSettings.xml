@@ -1,0 +1,6 @@
+<Settings>
+  <Setting IsDefault="[IsDefault]True" />
+  <Setting IsLocked="[IsLocked]True" />
+  <Setting LoadPath="[LoadPath]True" />
+  <Setting FirstTime="[FirstTime]False" />
+</Settings>

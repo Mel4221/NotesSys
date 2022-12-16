@@ -53,8 +53,14 @@ namespace NotesSys
                   switch (options.Pick())
                   {
                         case 0:
+                              notesManager.NewNote(new Note() {
+                                    Name = Get.TextInput("Name From the Note"),
+                                    Text = Get.TextInput("Please Type your notes"),
+
+                              }); 
                               break;
                         case 1:
+
                               break;
                         case 2:
                               break;

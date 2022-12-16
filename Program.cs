@@ -43,41 +43,8 @@ namespace NotesSys
       {
             public static void Main(string[] args)
             {
-                  /*
-                        NotesManager notesManager = new NotesManager();
-                        var setup = new SettingsManager();
-                  */
-
-                  NotesManager notes = new NotesManager();
-
-                  notes.Add(new Note() {
-                        Name = "TodoList",
-                        Text = "go to the school",
-                        Number = notes.Number(),
-
-                        
-                  });
-
-                  notes.Add(new Note()
-                  {
-                        Name = "TodoList",
-                        Text = "go to the store",
-                        Number = notes.Number()
-                        
-                  });
-
-
-                  foreach(var note in notes.Notes)
-                  {
-                        Get.Blue(note.ToString());
-                        //Get.Wait(note.ToString());
-                        //string file = $"{note.Number}{note.Name}.txt";
-                        Writer.Write(note.Number+"note.txt", note.ToString()); 
-                  }
-
-
-                  Get.Blue(notes.Get(0).ToString());
-                  Get.Wait("Waiting for input");
+                
+                 
                 /**********************************************************/
                   if (args.Length > 0 )
                   {

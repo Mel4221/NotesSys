@@ -23,50 +23,14 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+using System;
+using QuickTools;
+using System.Collections.Generic;
+
 namespace NotesSys
 {
-      public class SettingsList<Key,Value>
+      public partial class NotesManager
       {
-            public Key SettingKey { get; set;}
-            public Value SettingValue { get; set;  }
 
-            public SettingsList<Key, Value> List; 
-            /*
-            public SettingsList()
-            {
-
-            }
-            public SettingsList(Key key , Value value)
-            {
-                  this.SettingKey = key;
-                  this.SettingValue = value; 
-            }
-
-            private SettingsManager settingsManager = new SettingsManager(); 
-
-            public string Read(Key key)
-            {
-                  return settingsManager.Load(key); 
-            }
-
-            public void Write(Key key , Value value)
-            {
-                  settingsManager.Add(key, value); 
-            }
-
-            public void Add(Key key , Value value)
-            {
-                  List.Add(key, value); 
-            }
-            public void Remove(Key key)
-            {
-                  List.Remove(key); 
-            }
-            public int Count()
-            {
-                  return List.ToString().Length;
-            }
-            */
       }
-
 }

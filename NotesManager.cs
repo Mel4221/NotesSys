@@ -92,7 +92,12 @@ namespace NotesSys
             public NotesManager()
             {
                   SettingsManager settingsManager = new SettingsManager();
+
                   settingsManager.LoadSettings();
+             
+                  masterdb = "masterdb.xml";
+                  notesdb =  "notesdb.xml";
+
             }
       }
 }

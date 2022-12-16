@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{789E96B9-D63D-40C1-B208-8647247F7CEC}|Default">
   <MonoDevelop.Ide.ItemProperties.NotesSys PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="NotesManager.Data.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainMenu.cs">
     <Files>
-      <File FileName="Program.cs" Line="57" Column="1" />
-      <File FileName="NotesManager.Data.cs" Line="29" Column="19" />
+      <File FileName="NotesManagerInfo.cs" Line="82" Column="43" />
+      <File FileName="MainMenu.cs" Line="59" Column="37" />
+      <File FileName="NotesManager.cs" Line="88" Column="13" />
+      <File FileName="SettingsManager.cs" Line="36" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NotesSys" expanded="True">
             <Node name="NotesSys" expanded="True">
-              <Node name="NotesManager.Data.cs" selected="True" />
+              <Node name="MainMenu.cs" selected="True" />
             </Node>
           </Node>
         </State>

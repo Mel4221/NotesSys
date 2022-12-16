@@ -598,11 +598,11 @@
             tools that started this Project.
             </summary>
         </member>
-        <member name="M:QuickTools.Get.Porcent(System.Double,System.Double)">
+        <member name="M:QuickTools.Get.Status(System.Object,System.Object)">
             <summary>
-            Get the Porcent of the  specified current value from the  goal.
+            Get the porcenrage status of the provided current time and goal 
             </summary>
-            <returns>The porcent.</returns>
+            <returns>The status.</returns>
             <param name="current">Current.</param>
             <param name="goal">Goal.</param>
         </member>
@@ -655,6 +655,13 @@
             it will not override it 
             </summary>
             <returns>string path </returns>
+        </member>
+        <member name="M:QuickTools.Get.DataPath(System.String)">
+            <summary>
+            Create a data path if is not created and creates the directory given as a parameter
+            </summary>
+            <returns></returns>
+            <param name="newDirectory"></param>
         </member>
         <member name="M:QuickTools.Get.SaveKey">
             <summary>
@@ -1136,6 +1143,20 @@
             Write content into files
             </summary>
         </member>
+        <member name="M:QuickTools.Writer.ConvertToString(System.Byte[])">
+            <summary>
+            Converts to string a byte array 
+            </summary>
+            <returns>The to string.</returns>
+            <param name="array">Array.</param>
+        </member>
+        <member name="M:QuickTools.Writer.ConvertToByteArray(System.String)">
+            <summary>
+            Converts to byte array.
+            </summary>
+            <returns>The to byte array.</returns>
+            <param name="rowString">Row string.</param>
+        </member>
         <member name="M:QuickTools.Writer.WriteFile(System.String,System.Object)">
             <summary>
             Writes the content passed into a file
@@ -1565,7 +1586,8 @@
         </member>
         <member name="T:QuickTools.Secure">
             <summary>
-            Secure.
+            The Secure class works pretty well so far on text DO NOT USE IT ON BINARY DATA IT COULD BREAK 
+            THE FILES    
             </summary>
             <summary>
             The secure class is a class that uses the Aes tecnology to encrypt data by using
@@ -1639,12 +1661,6 @@
             <param name="clearText">Clear text.</param>
             <param name="key">Key.</param>
             <param name="iv">Iv.</param>
-        </member>
-        <member name="T:QuickTools.XmlHelper">
-            <summary>
-            This is a class that helps to make it easier to create
-            and add content to the xml files 
-            </summary>
         </member>
         <member name="M:QuickTools.XmlHelper.#ctor">
             <summary>
@@ -1786,6 +1802,425 @@
             <summary>
             Initializes a new instance of the <see cref="T:QuickTools.Cache"/> class.
             </summary>
+        </member>
+        <member name="T:QuickTools.QSettings">
+            <summary>
+            QSettings helps to create a settings model based on xml 
+            it actually works pretty well and it is very simple to use 
+            </summary>
+        </member>
+        <member name="T:QuickTools.QSettings.Settings">
+            <summary>
+            Sedttigns Object
+            </summary>
+        </member>
+        <member name="P:QuickTools.QSettings.Settings.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:QuickTools.QSettings.Settings.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="F:QuickTools.QSettings.Keys">
+            <summary>
+            This contains the list of keys in the settings file 
+            </summary>
+        </member>
+        <member name="F:QuickTools.QSettings.Values">
+            <summary>
+            This Will contain the values from the settings file 
+            </summary>
+        </member>
+        <member name="F:QuickTools.QSettings.SettingsList">
+            <summary>
+            This will contains the list of settings
+            </summary>
+        </member>
+        <member name="P:QuickTools.QSettings.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>The name of the file.</value>
+        </member>
+        <member name="P:QuickTools.QSettings.ElementName">
+            <summary>
+            Gets or sets the name of the element.
+            </summary>
+            <value>The name of the element.</value>
+        </member>
+        <member name="P:QuickTools.QSettings.GroupName">
+            <summary>
+            Gets or sets the name of the group of tags in the settings 
+            </summary>
+            <value>The name of the group.</value>
+        </member>
+        <member name="M:QuickTools.QSettings.Create">
+            <summary>
+            Create the specified settings file with the given name .
+            </summary>
+            <returns> true if created was sucessfull otherwise flase </returns>
+        </member>
+        <member name="M:QuickTools.QSettings.Load">
+            <summary>
+            Load to memory the xml file 
+            </summary>
+        </member>
+        <member name="M:QuickTools.QSettings.Load(System.String)">
+            <summary>
+            Load the specified file with the given name .
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:QuickTools.QSettings.Add(System.String,System.Object)">
+            <summary>
+            Add the specified key setting with the given  value.
+            </summary>
+            <param name="key">Key.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.QSettings.GetSetting(System.String)">
+            <summary>
+            Get the setting value from the key 
+            </summary>
+            <returns>The setting.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:QuickTools.QSettings.RemoveSetting(System.String)">
+            <summary>
+            Removes the setting from the setting file 
+            </summary>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:QuickTools.QSettings.Refresh">
+            <summary>
+            Refresh the settings values
+            </summary>
+        </member>
+        <member name="M:QuickTools.QSettings.Update(System.String,System.String)">
+            <summary>
+            Update the specified setting with the a new Value.
+            </summary>
+            <param name="setting">Setting.</param>
+            <param name="newValue">New value.</param>
+        </member>
+        <member name="M:QuickTools.QSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QSettings"/> class.
+            The fallowing settings are applied as default : 
+            FileName = "Settings.xml";
+            ElementName = "Setting";
+            GroupName = "Settings";
+            </summary>
+        </member>
+        <member name="M:QuickTools.QSettings.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QSettings"/> class.
+            with only the file name 
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:QuickTools.QSettings.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QSettings"/> class.
+            </summary>
+            <param name="fileName">File name.</param>
+            <param name="elementName">Element name.</param>
+        </member>
+        <member name="M:QuickTools.QSettings.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QSettings"/> class.
+            The settings will have to be manually ajusted 
+            </summary>
+            <param name="fileName">File name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="elementName">Element name.</param>
+        </member>
+        <member name="T:QuickTools.MiniDB">
+            <summary>
+            Mini DB is a class that provide a semy no relation database 
+            based on the key value method 
+            </summary>
+        </member>
+        <member name="M:QuickTools.MiniDB.AddKey(System.String,System.String,System.Boolean)">
+            <summary>
+            Adds the key but mainly turns on or off the loaded which could help on speed up write time 
+            below i provide the benefits from using  this method 
+            Minutes: 2 Seconds: 28 Milliseconds: 354
+            Minutes: 3 Seconds: 53 Milliseconds: 761
+            Minutes: 5 Seconds: 34 Milliseconds: 55
+            with no repeated initialization
+            Minutes: 6 Seconds: 47 Milliseconds: 990
+            with repatead inizialation
+            </summary>
+            <returns><c>true</c>, if key was added, <c>false</c> otherwise.</returns>
+            <param name="key">Key.</param>
+            <param name="value">Value.</param>
+            <param name="autoLoad">If set to <c>true</c> auto load.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.AddKey(System.Object,System.Object)">
+            <summary>
+            Adds the key to the database 
+            </summary>
+            <returns><c>true</c>, if key was added, <c>false</c> otherwise.</returns>
+            <param name="key">Key.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.AddKey(System.Object,System.Object,System.Object)">
+            <summary>
+            Adds the key.
+            </summary>
+            <param name="key">Key.</param>
+            <param name="value">Value.</param>
+            <param name="relationOrType">Relation or type.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.GetKey(System.Object)">
+            <summary>
+            Gets the key and returns the result
+            </summary>
+            <returns>The key.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.GetKeyObject(System.Object)">
+            <summary>
+            Gets the key and returns the DB Object.
+            </summary>
+            <returns>The key object.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.RemoveKey(System.Object)">
+            <summary>
+            Removes the key 
+            </summary>
+            <returns><c>true</c>, if key was removed, <c>false</c> otherwise.</returns>
+            <param name="keyName">Key name.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.RemoveKey(System.Int32)">
+            <summary>
+            Removes the key with the index provideds
+            </summary>
+            <returns><c>true</c>, if key was removed, <c>false</c> otherwise.</returns>
+            <param name="KeyIndex">Key index.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.Find(System.String)">
+            <summary>
+            Find the specified object that mactch the critirias.
+            </summary>
+            <returns>The find.</returns>
+            <param name="cratiria">Cratiria.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.UpdateKeyValue(System.Object,System.Object)">
+            <summary>
+            Updates the key value.
+            </summary>
+            <returns><c>true</c>, if key value was updated, <c>false</c> otherwise.</returns>
+            <param name="Key">Key.</param>
+            <param name="newValue">New value.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.UpdateKey(System.Object,QuickTools.MiniDB.DB)">
+            <summary>
+            Updates the key with the object DB
+            </summary>
+            <returns><c>true</c>, if key was updated, <c>false</c> otherwise.</returns>
+            <param name="keyName">Key name.</param>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.RefreshDB">
+            <summary>
+            Refreshs the DataBase.
+            </summary>
+        </member>
+        <member name="M:QuickTools.MiniDB.Load">
+            <summary>
+            Loads the data base 
+            </summary>
+        </member>
+        <member name="M:QuickTools.MiniDB.Load(System.Object)">
+            <summary>
+            Load the specified database
+            </summary>
+            <param name="db">Db.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.Create(System.String)">
+            <summary>
+            Create the specified Database if returns true it means it was created sucessfully
+            if ir returns false is that there is already a db named like that 
+            </summary>
+            <param name="dbName">Db name.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.Create">
+            <summary>
+            Create the specified Database if returns true it means it was created sucessfully
+            if ir returns false is that there is already a db named like that 
+            </summary>
+        </member>
+        <member name="T:QuickTools.MiniDB.DB">
+            <summary>
+            DB object in which the values are formated and stored
+            </summary>
+        </member>
+        <member name="P:QuickTools.MiniDB.DB.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.DB.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.DB.Relation">
+            <summary>
+            Gets or sets the relation.
+            </summary>
+            <value>The relation.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.DB.Identity">
+            <summary>
+            Gets or sets the identity.
+            </summary>
+            <value>The identity.</value>
+        </member>
+        <member name="M:QuickTools.MiniDB.Relation">
+            <summary>
+            This method will be available to be modefied by the user of the class  to handle the relations 
+            </summary>
+        </member>
+        <member name="P:QuickTools.MiniDB.DBName">
+            <summary>
+            Gets or sets the DBN ame.
+            </summary>
+            <value>The DBN ame.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.KeysName">
+            <summary>
+            Gets or sets the name of the keys.
+            </summary>
+            <value>The name of the keys.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.RelationOrType">
+            <summary>
+            Gets or sets the type of the relation or.
+            </summary>
+            <value>The type of the relation or.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.AllowRepeatedKeys">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:QuickTools.MiniDB"/> allow repeated keys.
+            </summary>
+            <value><c>true</c> if allow repeated keys; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.Path">
+            <summary>
+            Gets or sets the path for the DB
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:QuickTools.MiniDB.ID">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="F:QuickTools.MiniDB.DataBase">
+            <summary>
+            Contains the Database from the program
+            </summary>
+        </member>
+        <member name="M:QuickTools.MiniDB.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.MiniDB"/> VERY IMPORTANT WHEN INITIALIZES LIKE THIS 
+            IT WILL NOT LOAD THE DATABASE IT WILL HAVE TO BE LOADED MANUALLY BY CALLING  THE  Load() METHOD.
+            </summary>
+        </member>
+        <member name="M:QuickTools.MiniDB.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.MiniDB"/> class.
+            </summary>
+            <param name="dbName">Db name.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.MiniDB"/> class.
+            </summary>
+            <param name="dbName">Db name.</param>
+            <param name="autoLoad">If set to <c>true</c> auto load.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.MiniDB"/> class.
+            </summary>
+            <param name="dbName">Db name.</param>
+            <param name="keyName">Key name.</param>
+            <param name="relationOrType">Relation or type.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.MiniDB"/> class.
+            </summary>
+            <param name="dbName">Db name.</param>
+            <param name="keyName">Key name.</param>
+            <param name="relationOrType">Relation or type.</param>
+            <param name="defaultPath">If set to <c>true</c> default path.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.#ctor(System.String,System.String,System.String,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.MiniDB"/> class.
+            </summary>
+            <param name="dbName">Db name.</param>
+            <param name="keyName">Key name.</param>
+            <param name="relationOrType">Relation or type.</param>
+            <param name="id">Identifier.</param>
+        </member>
+        <member name="M:QuickTools.MiniDB.#ctor(System.String,System.String,System.String,System.Double,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.MiniDB"/> class.
+            </summary>
+            <param name="dbName">Db name.</param>
+            <param name="keyName">Key name.</param>
+            <param name="relationOrType">Relation or type.</param>
+            <param name="id">Identifier.</param>
+            <param name="allowRepeatedKeys">If set to <c>true</c> allow repeated keys.</param>
+        </member>
+        <member name="T:QuickTools.Check">
+            <summary>
+            This is an abstraction of Stoop Watch which provide some functionalities from the same class
+            </summary>
+        </member>
+        <member name="P:QuickTools.Check.Seconds">
+            <summary>
+            Gets or sets the seconds.
+            </summary>
+            <value>The seconds.</value>
+        </member>
+        <member name="P:QuickTools.Check.Minutes">
+            <summary>
+            Gets or sets the minutes.
+            </summary>
+            <value>The minutes.</value>
+        </member>
+        <member name="P:QuickTools.Check.Milliseconds">
+            <summary>
+            Gets or sets the milliseconds.
+            </summary>
+            <value>The milliseconds.</value>
+        </member>
+        <member name="M:QuickTools.Check.Start">
+            <summary>
+            Start this instance.
+            </summary>
+        </member>
+        <member name="M:QuickTools.Check.Stop">
+            <summary>
+            Stop this instance.
+            </summary>
+            <returns>The stop.</returns>
         </member>
         <member name="T:MyRedactedNamespace.ProcessProtection">
             <summary>
